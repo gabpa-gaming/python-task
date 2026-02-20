@@ -12,7 +12,7 @@ def add_virtual_column(df: pd.DataFrame, role: str, new_column: str) -> pd.DataF
     if not is_role_valid(df, role):
         return pd.DataFrame()
 
-    expr = new_column + "=" + role;
+    expr = new_column + "=" + role
     return df.eval(expr)
 
 def is_column_valid(new_column: str) -> bool:
